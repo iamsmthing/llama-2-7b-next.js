@@ -37,7 +37,7 @@ const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     setisLoading(true)
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/data", { method: "POST" ,body:inputVal});
+        const res = await fetch("https://llama-2-7b.vercel.app/api/data", { method: "POST" ,body:inputVal});
 
         if (!res.ok) {
           console.error(`Failed to fetch data. Status code: ${res.status}`);
