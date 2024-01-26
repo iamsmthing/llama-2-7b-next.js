@@ -18,11 +18,11 @@ export default async function logout(
     
       try {
         
-        const data=await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/ai/run/@cf/meta/llama-2-7b-chat-int8`,
+        const data=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/@cf/meta/llama-2-7b-chat-int8`,
     
         {method:'POST',body:JSON.stringify({
          messages
-        }),headers:{Authorization: `Bearer ${API_KEY}`,
+        }),headers:{Authorization: `Bearer ${process.env.CLOUDFLARE_API_KEY}`,
             'Content-Type': 'application/json', }
       })
    
