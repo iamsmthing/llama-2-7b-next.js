@@ -5,7 +5,7 @@ import { headers } from "next/headers";
 
 const API_KEY=process.env.CLOUDFLARE_API_KEY
 const ACCOUNT_ID=process.env.CLOUDFLARE_ACCOUNT_ID
-export default async function logout(
+export default async function POST(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
